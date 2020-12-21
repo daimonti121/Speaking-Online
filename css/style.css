@@ -1,0 +1,401 @@
+body {
+  text-align: center;
+  width: 720px;
+  margin: 0 auto;
+}
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.burger-menu__button {
+  position: relative;
+  top: 40px;
+  right: 52px;
+  z-index: 30;
+  width: 40px;
+  height: 40px;
+}
+
+.burger-menu__button:hover .burger-menu__lines {
+  filter: brightness(0.7);
+}
+
+.burger-menu__lines,
+.burger-menu__lines::after,
+.burger-menu__lines::before {
+  position: absolute;
+  width: 30px;
+  height: 6px;
+  background-color: #2a2a2a;
+}
+
+.burger-menu__lines {
+  transform: translate(-50%, -50%);
+}
+
+.burger-menu__lines::before {
+  content: "";
+  top: -12px;
+  left: 0;
+}
+
+.burger-menu__lines::after {
+  content: "";
+  top: 12px;
+  left: 0;
+}
+
+.burger-menu_active .burger-menu__lines {
+  background-color: transparent;
+}
+
+.burger-menu_active .burger-menu__lines::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.burger-menu_active .burger-menu__lines::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.burger-menu__nav {
+  padding-top: 80px;
+  position: fixed;
+  z-index: 20;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  background-color: #b4c9ab;
+  overflow-y: auto;
+  right: -100%;
+}
+
+.burger-menu_active .burger-menu__nav {
+  right: 0;
+  width: 400px;
+}
+
+.burger-menu__link {
+  padding: 30px;
+  font-family: sans-serif;
+  font-size: 32px;
+  text-decoration: none;
+  color: #4b4b4b;
+}
+
+.burger-menu__link:hover {
+  filter: brightness(0.7);
+}
+
+.burger-menu__overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+
+.burger-menu_active .burger-menu__overlay {
+  display: block;
+}
+.first-row {
+  display: flex;
+  justify-content: space-between;
+  width: 720px;
+  height: 80px;
+}
+.logo {
+  margin-top: 18px;
+  margin-left: 22px;
+}
+.logo-link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+
+  color: #626262;
+  text-decoration: none;
+}
+
+.block-title {
+  width: 720px;
+  height: 120px;
+  background: #c9e8b5;
+  margin: 0 auto;
+}
+.title-info {
+  padding-top: 8px;
+}
+
+.title-info h1 {
+  font-family: Secular One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 61px;
+
+  color: #626262;
+}
+.just-line {
+  margin-top: 10px;
+  width: 720px;
+  height: 10px;
+  background: #c9e8b5;
+  margin-bottom: 45px;
+  margin: 10px auto 45px;
+}
+.title-course {
+  margin: 0 auto;
+  width: 690px;
+  height: 100px;
+  background: #c9e8b5;
+  border-radius: 15px;
+  text-align: center;
+}
+.title-course h4 {
+  font-family: Secular One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 52px;
+  color: #626262;
+  padding-top: 24px;
+}
+.info-list {
+  margin: 62px auto 0px;
+  width: 690px;
+  height: 70px;
+  background: #b5dce8;
+  border-radius: 15px;
+}
+.info-list h3 {
+  font-family: Secular One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 35px;
+  text-align: center;
+  color: #4b4b4b;
+  padding-top: 18px;
+}
+.course-info-block {
+  width: 400px;
+  height: 100px;
+  background: #ffffff;
+  border: 3px solid #7bb4c0;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 25px auto 0px;
+}
+.course-info-block h3 {
+  font-family: Secular One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 47px;
+  color: #4f4f4f;
+  width: 400px;
+  height: 100px;
+  margin-top: 25px;
+}
+.text-padding-course {
+  width: 400px;
+  height: 100px;
+  background: #ffffff;
+  border: 3px solid #7bb4c0;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 25px auto 0px;
+}
+.text-padding-course h3 {
+  font-family: Secular One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 47px;
+  text-align: center;
+  color: #4f4f4f;
+  margin-top: 4px;
+}
+.margin-course {
+  margin-top: 90px;
+  margin-bottom: 30px;
+}
+.section-course-offer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 86px;
+  width: 690px;
+  height: 1300px;
+  background: #e8ffa7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.section-course-offer:last-child {
+  margin-bottom: 36 px;
+}
+.block-course-offer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.title-course-offer {
+  margin-left: 30px;
+  margin-top: -30px;
+}
+.title-course-offer h4 {
+  font-family: Secular One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 70px;
+  color: #626262;
+}
+.text-course-offer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -80px;
+}
+.course-explanation {
+  text-align: left;
+  font-family: Secular One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 47px;
+  color: #626262;
+  width: 440px;
+}
+.image-course-offer {
+  margin-left: 30px;
+}
+.text-recommandation-course {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-course-details {
+  margin-top: 100px;
+}
+.text-recommandation {
+  width: 120px;
+  height: 80px;
+  background: #c4c4c4;
+  margin-left: 30px;
+}
+.p-pre-recommandation {
+  padding-top: px;
+  font-family: Secular One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: #5329cb;
+}
+.text-explanation {
+  margin-bottom: 60px;
+  margin-left: 35px;
+  text-align: left;
+  height: 78px;
+  width: 477px;
+}
+.text-explanation p {
+  font-family: Secular One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 35px;
+  color: #626262;
+}
+.title-course-details {
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.title-course-details h4 {
+  font-family: Secular One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 52px;
+  color: #626262;
+}
+.course-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -60px;
+}
+.block-img-details {
+  margin-top: -90px;
+  margin-left: 30px;
+}
+.details-text-course {
+  margin-top: -10px;
+  margin-left: 10px;
+}
+.details-text-course pre {
+  font-family: Secular One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 52px;
+  color: #626262;
+  text-align: left;
+}
+.last-about-course {
+  margin: 80px auto 0px;
+  padding-bottom: 365px;
+}
+.last-about-course p {
+  text-align: center;
+  font-family: Secular One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 52px;
+  color: #626262;
+}
+.comeback-link {
+  width: 400px;
+  height: 80px;
+  background: #95b3ff;
+  border-radius: 10px;
+  margin: 0 auto 140px;
+}
+.link-img-back {
+  width: 300px;
+  height: 80px;
+  margin: 0 auto;
+}
+.img-a-link {
+  height: 80px;
+  margin: 0 auto;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.img-a-link p {
+  font-family: Secular One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 52px;
+  color: #303030;
+}
+.color-blue {
+  background: #67c9ff;
+}
+.color-sapphirine {
+  background-color: #ccedff;
+}
